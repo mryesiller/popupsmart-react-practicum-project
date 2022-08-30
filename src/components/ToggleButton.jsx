@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { eventStore } from "../context/eventContext"
 
 const ToggleButton = () => {
@@ -6,7 +6,7 @@ const ToggleButton = () => {
 
   return (
     <div>
-      <label>
+      <label className="toggle__button">
         <input
           className="toggle-checkbox"
           type="checkbox"

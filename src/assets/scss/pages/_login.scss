@@ -52,4 +52,29 @@
             }
         }
     }
+
+    @media screen and (max-width: 768px) {
+        width:100%;
+        max-width:90%;
+        margin:5rem auto;
+        padding:1rem 2rem;
+        border-top:5px solid #ccc;
+        border-radius:10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        .form__group {
+            label {
+                font-size:1rem;
+                margin:0.5rem 0;
+            }
+            input {
+                font-size:1rem;
+                padding:0.5rem;
+            }
+            button {
+                font-size:1rem;
+                padding:0.5rem;
+            }
+        }   
+        
+    }
 }

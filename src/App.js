@@ -2,7 +2,7 @@ import React from "react"
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import { authStore } from "./context/authContext"
 
-import { Home, Layout, Login } from "./pages"
+import { Home, Layout, Login, Error } from "./pages"
 
 function App() {
   const { user } = authStore()
@@ -17,6 +17,7 @@ function App() {
         <Route path="/" element={user ? <Layout /> : <Navigate to="/login" />}>
           <Route index element={<Home />} />
         </Route>
+        <Route path="/*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   )
