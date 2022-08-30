@@ -14,12 +14,8 @@ const AddTodo = ({ addTodo }) => {
     const fromData = new FormData(e.target)
     const todo = fromData.get("todo")
 
-    if (todo.length < 3) {
-      alert("Todo must be at least 3 characters long")
-    } else {
-      setText("")
-      addTodo(todo)
-    }
+    setText("")
+    addTodo(todo)
   }
 
   return (
@@ -36,6 +32,7 @@ const AddTodo = ({ addTodo }) => {
           name="todo"
           value={text}
           onChange={handleChangeValue}
+          minLength="3"
         />
         <div className="modal__buttons">
           <button
