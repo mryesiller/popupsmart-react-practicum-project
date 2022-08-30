@@ -16,9 +16,10 @@ const AddTodo = ({ addTodo }) => {
 
     if (todo.length < 3) {
       alert("Todo must be at least 3 characters long")
+    } else {
+      setText("")
+      addTodo(todo)
     }
-    setText("")
-    addTodo(todo)
   }
 
   return (
