@@ -1,5 +1,7 @@
 import create from "zustand"
 
+const url = "https://630c88ab53a833c5342ddef8.mockapi.io"
+
 export const todoStore = create((set, get) => ({
   todos: [],
   todoID: null,
@@ -8,7 +10,7 @@ export const todoStore = create((set, get) => ({
   addNewTodo: async (newTodo) => {
     set({ isLoading: true })
 
-    const response = await fetch("/todos", {
+    const response = await fetch(`${url}/todos`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -29,7 +31,7 @@ export const todoStore = create((set, get) => ({
   deleteTodo: async (todoID) => {
     set({ isLoading: true })
 
-    const response = await fetch(`/todos/${todoID}`, {
+    const response = await fetch(`${url}/todos/${todoID}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -49,7 +51,7 @@ export const todoStore = create((set, get) => ({
   getTodos: async () => {
     set({ isLoading: true })
 
-    await fetch("/todos", {
+    await fetch(`${url}/todos`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -69,7 +71,7 @@ export const todoStore = create((set, get) => ({
   completeTodo: async (todoID, completed) => {
     set({ isLoading: true })
 
-    const response = await fetch(`/todos/${todoID}`, {
+    const response = await fetch(`${url}/todos/${todoID}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -89,7 +91,7 @@ export const todoStore = create((set, get) => ({
   editTodo: async (text) => {
     set({ isLoading: true })
 
-    await fetch(`/todos/${get().todoID}`, {
+    await fetch(`${url}/todos/${get().todoID}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -106,15 +108,5 @@ export const todoStore = create((set, get) => ({
         set({ isLoading: false })
         set({ error: err })
       })
-  },
-  updateFilter: (filter) => {
-    set((state) => ({
-      filter,
-    }))
-  },
-  clearCompletedTodos: () => {
-    set((state) => ({
-      todos: state.todos.filter((t) => !t.completed),
-    }))
   },
 }))
