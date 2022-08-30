@@ -24,17 +24,18 @@
 
     &:hover {
         background-color: darken(#363646, 20%);
+        color:white;
     }
 
 }
 
 .delete__button {
-    background:url(../../images/delete.jpg);
-    background-size:cover;
-    width:30px;    
+    background:url(../../images/trashbin.svg);
+    background-size: contain;
+    background-repeat: no-repeat;    
     border:0;    
     cursor: pointer;
-    padding: 1rem; 
+    padding: 0.75rem; 
     transition: transform .2s;
     
 
@@ -44,12 +45,12 @@
 }
 
 .edit__button {
-    background:url(../../images/edit.png);
-    background-size:cover;
-    width:30px;    
+    background:url(../../images/edit.svg);
+    background-size: contain;
+    background-repeat: no-repeat;        
     border:0;    
     cursor: pointer;
-    padding: 1rem; 
+    padding: 0.75rem; 
     transition: transform .2s;
     
 

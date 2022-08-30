@@ -5,26 +5,24 @@ const ToggleButton = () => {
   const { darkmode } = eventStore()
 
   return (
-    <div>
-      <label className="toggle__button">
-        <input
-          className="toggle-checkbox"
-          type="checkbox"
-          value={darkmode}
-          onChange={() => {
-            eventStore.setState({ darkmode: !darkmode })
-            if (darkmode) {
-              document.body.classList.add("dark__mode")
-            } else {
-              document.body.classList.remove("dark__mode")
-            }
-          }}
-        ></input>
-        <div className="toggle-slot">
-          <div className="sun-icon-wrapper"></div>
-          <div className="toggle-button"></div>
-          <div className="moon-icon-wrapper"></div>
-        </div>
+    <div class="form-check form-switch">
+      <input
+        class="form-check-input"
+        type="checkbox"
+        role="switch"
+        id="flexSwitchCheckDefault"
+        value={darkmode}
+        onChange={() => {
+          if (darkmode) {
+            document.body.classList.add("dark__mode")
+          } else {
+            document.body.classList.remove("dark__mode")
+          }
+          eventStore.setState({ darkmode: !darkmode })
+        }}
+      />
+      <label class="form-check-label" for="flexSwitchCheckDefault">
+        {darkmode ? "Light Mode" : "Dark Mode"}
       </label>
     </div>
   )

@@ -24,11 +24,7 @@ html {
             background-color: white !important;
             color:#363646 !important;            
             box-shadow: 3px 3px 12px rgba(255, 255, 255, 0.7);
-        }
-
-        .backdrop__modal {
-            background-color: rgba(255, 255, 255, 0.7);   
-        }
+        }       
 
         header,footer {
             background-color: white !important;
@@ -51,7 +47,7 @@ html {
                 color: #363646 !important;
 
                 &:hover {
-                    background-color: darken(white,20%) !important;
+                    background-color: darken(white,30%) !important;
                     color: darken(#363646,50%) !important;
                 }
             }
@@ -59,6 +55,11 @@ html {
 
         .loading {
             color:white;
+        }
+
+        .login__form {
+            background-color:white !important;
+            color: #363646 !important;
         }
     }
 }

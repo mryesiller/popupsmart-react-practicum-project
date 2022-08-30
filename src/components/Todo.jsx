@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { todoStore } from "../context/todoContext"
 import { eventStore } from "../context/eventContext"
-import complete from "../assets/images/complete.png"
+import complete from "../assets/images/check-solid.svg"
 
 const Todo = ({ text, deleteTask, editTask, completed, checkTask }) => {
   const [checked, setChecked] = useState(completed)
@@ -28,7 +28,9 @@ const Todo = ({ text, deleteTask, editTask, completed, checkTask }) => {
         </span>
         <input
           type="checkbox"
-          className={isLoading ? "disabled" : ""}
+          className={
+            modalStatusUpdateTodo || modalStatusAddTodo ? "z-index" : ""
+          }
           defaultChecked={checked}
           onChange={() => setChecked(!checked)}
           onClick={checkTask}

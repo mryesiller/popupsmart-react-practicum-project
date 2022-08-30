@@ -77,7 +77,7 @@ const Home = () => {
         </div>
         <div className="addtodo__container">
           <button
-            className="btn "
+            className="btn"
             onClick={() => {
               eventStore.setState({ modalStatusAddTodo: !modalStatusAddTodo })
               eventStore.setState({ backdropStatus: !backdropStatus })
