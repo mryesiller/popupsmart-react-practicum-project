@@ -1,0 +1,74 @@
+
+.todo__container {
+    display: flex;
+    justify-content: flex-start;    
+    flex-wrap: wrap;    
+    width: 100%;
+    max-width:1200px;
+    margin-top: 3rem;
+}
+
+.todo__card {
+    display: flex;
+    flex-direction: column;   
+    margin:0 auto;
+    width:250px;
+    max-width:600px;
+    padding:0.75rem 1rem;
+    margin:1rem 1rem;
+    border:1px solid #ccc;    
+    border-top:5px solid #363646;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+    &.z-index *{
+        z-index: -10;
+    }
+    
+    p {
+        font-size:1.25rem;
+        font-weight:400;
+        margin:1rem 0;      
+        cursor:pointer;
+    }
+
+    hr {      
+
+        width:100%;
+        border:1px solid #363646;
+        margin-top:2rem;
+    }    
+}
+
+.todo__buttons {
+    display:flex;
+    justify-content:flex-end;
+    position:relative;
+    width:100%;
+    margin:1rem 1rem;
+    margin-bottom:1rem;
+    
+    button {
+        margin:0 0.5rem;
+    }
+
+    span {
+        background: url(../../images/complete.png);  
+        position:absolute;
+        left:-18px;      
+        width:20px;        
+        margin-top:0.3rem; 
+              
+    }
+
+    input {        
+        margin-right: auto;
+        
+    }
+  
+}
+
+.todo__completed {
+    text-decoration: line-through;
+    color:#363646;
+}

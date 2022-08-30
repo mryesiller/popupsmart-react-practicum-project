@@ -1,0 +1,66 @@
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;    
+    padding: 3rem;
+    background-color:#363646; 
+    color:white;    
+    
+    h3{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav {
+        margin:0 auto;        
+        
+        ul{
+            display:flex;
+            margin-right:0 auto; 
+            li {
+                list-style-type:none;
+                margin:0 1.25rem;
+
+                a {
+                    font-size:1.25rem;
+                    font-weight:400;
+                    cursor:pointer;
+                    padding:0.75rem;
+                    border-radius:5px;
+                    color:white;
+
+                    &:hover {
+                        background-color: white;
+                        color:#363646;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        font-size:1rem;
+                    }           
+                    
+                }
+
+                p{
+                    font-size:1.25rem;
+                    font-weight:400;
+
+                    @media screen and (max-width: 768px) {
+                        font-size:1rem;
+                    
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
+        padding:2rem;
+        h3 {
+            display:none;
+        }             
+    }
+}
