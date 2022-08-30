@@ -14,6 +14,49 @@ html {
     padding: 0;
     font-weight: normal;
     font-family: 'Roboto', sans-serif;
+    transition: all 0.3s;;
+
+    &.dark__mode {
+        background-color: #363646 !important;
+        color: white !important;
+
+        .todo__container > .todo__card {
+            background-color: white !important;
+            color:#363646 !important;            
+            box-shadow: 3px 3px 12px rgba(255, 255, 255, 0.7);
+        }
+
+        .backdrop__modal {
+            background-color: rgba(255, 255, 255, 0.7);   
+        }
+
+        header,footer {
+            background-color: white !important;
+            color: #363646 !important;
+
+            nav ul li a {
+                color: #363646 !important;
+                border: 2px solid #363646;
+
+                &:hover {
+                    background-color: #363646 !important;
+                    color: white !important;
+                }
+            }
+        }
+        
+        .addtodo__container {
+            button {
+                background-color:white !important;
+                color: #363646 !important;
+
+                &:hover {
+                    background-color: darken(white,20%) !important;
+                    color: darken(#363646,50%) !important;
+                }
+            }
+        }
+    }
 }
 
 :is(ol,ul) {

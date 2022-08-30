@@ -2,7 +2,7 @@ import React, { Fragment } from "react"
 import { Outlet } from "react-router-dom"
 import { eventStore } from "../../context/eventContext"
 
-import { Navbar } from "../../components"
+import { Navbar, ToggleButton } from "../../components"
 
 const Layout = () => {
   const { backdropStatus } = eventStore()
@@ -22,7 +22,10 @@ const Layout = () => {
       <main className="main__content">
         <Outlet />
       </main>
-      <footer></footer>
+      <footer>
+        <h4>@MrYesiller</h4>
+        <ToggleButton />
+      </footer>
     </Fragment>
   )
 }

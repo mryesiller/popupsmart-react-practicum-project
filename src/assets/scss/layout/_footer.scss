@@ -1,0 +1,14 @@
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 auto;    
+    padding: 2rem;    
+    background-color:#363646; 
+    color:white;  
+
+    div * {
+        transform: scale(0.2);
+    }
+}

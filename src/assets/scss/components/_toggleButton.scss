@@ -1,33 +1,4 @@
 
-.disabled {
-    pointer-events: none;
-    cursor: default;
-}
-
-.visible {
-    display:none;
-}
-
-.error {
-    color:red;
-    font-size: 1.5rem;
-    text-align:center;
-}
-
-// .dark {
-//     background-color: white !important;
-//     color: #363646 !important;
-// }
-
-// .dark__main {
-//     section {
-//         background-color: #363646 !important;
-//         color: white !important;
-//     }   
-// }
-
-
-
 .toggle-checkbox {
     position: absolute;
     opacity: 0;
