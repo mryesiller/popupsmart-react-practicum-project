@@ -13,7 +13,7 @@ const Login = () => {
 
   return (
     <form className="login__form" onSubmit={handleSubmit}>
-      <h3>Login for Todo Page</h3>
+      <h3>Login for Todo Dashboard</h3>
       <div className="form__group">
         <label htmlFor="username">Username</label>
         <input
