@@ -1,5 +1,6 @@
 import React, { Fragment } from "react"
 import { authStore } from "../context/authContext"
+import ToggleButton from "./ToggleButton"
 
 const Navbar = () => {
   const user = authStore((state) => state.user)
@@ -10,7 +11,13 @@ const Navbar = () => {
   }
   return (
     <Fragment>
-      <h3>Popupsmart TodoApp</h3>
+      <h3>
+        Popupsmart TodoApp
+        <h5>
+          <ToggleButton />
+        </h5>
+      </h3>
+
       <nav>
         {user && (
           <ul>

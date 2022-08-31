@@ -1,9 +1,12 @@
 import create from "zustand"
 
-export const authStore = create((set) => ({
+const initialState = {
   user: null,
   isLoading: false,
   error: null,
+}
+
+const authMethods = (set) => ({
   loginUser: async (username) => {
     set({ isLoading: true })
     try {
@@ -16,6 +19,11 @@ export const authStore = create((set) => ({
   },
   logout: () => {
     localStorage.removeItem("user")
-    set({ user: null })
+    set(initialState)
   },
+})
+
+export const authStore = create((set) => ({
+  ...initialState,
+  ...authMethods(set),
 }))

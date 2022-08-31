@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react"
-import { todoStore } from "../context/todoContext"
 import { eventStore } from "../context/eventContext"
 import complete from "../assets/images/check-solid.svg"
 
 const Todo = ({ text, deleteTask, editTask, completed, checkTask }) => {
   const [checked, setChecked] = useState(completed)
-  const { isLoading } = todoStore()
   const { modalStatusAddTodo, modalStatusUpdateTodo } = eventStore()
 
   useEffect(() => {

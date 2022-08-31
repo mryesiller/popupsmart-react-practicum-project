@@ -1,8 +1,12 @@
 import create from "zustand"
 
-export const eventStore = create((set) => ({
+const initialState = {
   darkmode: false,
   modalStatusUpdateTodo: false,
   modalStatusAddTodo: false,
   backdropStatus: false,
+}
+
+export const eventStore = create(() => ({
+  ...initialState,
 }))
