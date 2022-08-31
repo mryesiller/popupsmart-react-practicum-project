@@ -13,9 +13,9 @@ const Navbar = () => {
     <Fragment>
       <h3>
         Popupsmart TodoApp
-        <h5>
+        <div className="toggle__navbar">
           <ToggleButton />
-        </h5>
+        </div>
       </h3>
 
       <nav>
