@@ -14,9 +14,9 @@ const ToggleButton = () => {
         value={darkmode}
         onChange={() => {
           if (darkmode) {
-            document.body.classList.add("dark__mode")
-          } else {
             document.body.classList.remove("dark__mode")
+          } else {
+            document.body.classList.add("dark__mode")
           }
           eventStore.setState({ darkmode: !darkmode })
         }}
